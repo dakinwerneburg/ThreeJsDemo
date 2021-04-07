@@ -1,0 +1,53 @@
+
+
+<!--
+  Author: Dakin T Werneburg 
+  CMSC 405 Computer Graphics
+  Project 3
+  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project 3</title>
+    <link rel="stylesheet" type="text/css" href="project3.css">
+  </head>
+  <body>
+    <div id="world">
+      <div id="threejs"></div>
+      <div class="userInterface">
+        <div class="wrapper">
+          <label class="title">Light Controls</label>
+          <div class="leftColumn">
+            <label class="typeofLight">Point Lights</label><br><br>
+            <label class="selection">Red Lights</label><br>
+            <label class="selection">Blue Lights</label><br>
+            <label class="selection">Green Lights</label><br><br>
+            <label class="typeofLight">Directional Light</label><br><br>
+            <label class="typeofLight">Spot Light</label><br><br>
+            <font size="1">-200x</font>
+            <input type="range" id="position" min="-200" max="200">
+            <font size="1">+200x</font><br><br>
+            <label class="typeofLight">Flash Light</label><br>
+            <label class="selection"for="color">color: </label>
+            <input type="text" id="color" max="8" placeholder="0xffffff" size="8"><br><br>
+          </div>
+          <div class="switches">
+          <label style="text-decoration:underline">On/Off</label><br><br>
+          <input type="checkbox" id="red" name="switch" checked><br>
+          <input type="checkbox" id="blue" name="switch" checked><br>
+          <input type="checkbox" id="green" name="switch" checked><br><br>
+          <input type="checkbox" id="dirLight" name="switch" checked><br><br><br>
+          <input type="checkbox" id="spotLight" name="switch" checked><br><br><br><br>
+          <input type="checkbox" id="flashLight" name="switch" checked><br><br>
+          </div>
+        </div>
+        <div class="animation">
+          <label for="button">Animation:  </label>
+          <button type="button" id="button">pause/resume</button>
+        </div>
+    <script src="three.js"></script>
+    <script src="OrbitControls.js"></script>   
+    <script src="project3.js"></script>
+  </body>
+</html>
